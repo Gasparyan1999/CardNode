@@ -25,7 +25,7 @@ app.post("/", async function (req, res) {
     res.json(card.rows);
   } else {
     const value = [req.body[0]];
-    const card = await pool.query(`DELETE FROM cARDS WHERE id = '${value}'`);
+    const card = await pool.query(`DELETE FROM cards WHERE id = '${value}'`);
     res.json(card.rows);
   }
 });
